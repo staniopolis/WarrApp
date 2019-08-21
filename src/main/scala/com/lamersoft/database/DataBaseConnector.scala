@@ -20,7 +20,7 @@ class DataBaseConnector {
       .column("customer")
       .column("product")
       .all().allowFiltering()
-      .whereColumn("customer").isEqualTo(literal("Loshara")) // SELECT release_version FROM system.local
+      .whereColumn("customer").isEqualTo(literal("Loshara"))
     val statement = query.build
     val rs = session.execute(statement)
     val row = rs.all()
